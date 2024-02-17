@@ -29,53 +29,49 @@
 \fancyfoot[RO]{\thepage}
 
 
-
-
-
 \input{inputs/definitions}
 
+%Bibliographies
 \addbibresource{bib/bibliography.bib}
+\addbibresource{bib/basics_data_analysis.bib}
+\addbibresource{bib/current_catalogs.bib}
+\addbibresource{bib/foundations.bib}
+\addbibresource{bib/ecc_search.bib}
+\addbibresource{bib/precession_study.bib}
+\addbibresource{bib/hierarchical_search.bib}
 
 \author{Rahul Dhurkunde}
 
 \begin{document}
 
+%Inputs
 \dominitoc
-
 \input{inputs/acronym_definitions}
-
 \frontmatter
-
 \input{inputs/titlepage}
-
 \input{inputs/committee}
-
 %\input{inputs/declaration}
-
 \input{inputs/abstract}
+\input{inputs/abstract_de}
+\input{inputs/preface}
 
-%\input{inputs/abstract_de}
-
+%Table of contents
 \tableofcontents
 \mtcaddchapter[Contents]
-
 \listoffigures
 \mtcaddchapter[List of Figures]
-
 \listoftables
 \mtcaddchapter[List of Tables]
-
 \input{inputs/acronyms}
 
 \mainmatter
 
-\include{chapters/main_introduction}
+%Chapters
+\include{chapters/introduction}
 
 \include{chapters/foundations}
 
-
 \include{chapters/basics_data_analysis}
-
 
 \include{chapters/current_catalogs}
 
@@ -87,18 +83,19 @@
 
 \include{chapters/conclusions}
 
-
-%\include{chapters/internship/internship_main}
-
-%\include{chapters/conclusions/conclusions_main}
-
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
+\begin{sloppy}
+\printbibliography
+\end{sloppy}
 
 \appendix
 
 \input{inputs/acknowledgments}
 
+%\input{inputs/4OGCcatalog}
+
 \input{inputs/publications}
 
-%\input{inputs/cv}
+\input{inputs/cv}
+
 \end{document}

@@ -1,0 +1,79 @@
+\chapter{Introduction}
+
+%Around $\sim 1.8$ billion stars have been observed in our galaxy in the latest observations by the Gaia mission (European Space Agency) \cite{Gaia}. From these observations, total 100 -- 400 billion stars are predicted to be in our galaxy. Majority of the stars in the Universe are expected to be in binary or higher multiplicity systems \cite{Sana:2012px}. Massive stars at the end of their life cycle undergo a supernovae explosion, leaving behind a neutron star (NS) or a black hole (BH), some of the most extremely dense objects in our universe. Compact objects can occur in binary systems as a result of evolution of two stars in isolation [] or a dynamical assembly of two compact objects from independently evolved stars [].  
+
+On the 14th of September 2015, gravitational-waves from two merging black-holes were discovered by the advanced laser interferometer gravitational-wave observatory (LIGO) \cite{LIGOScientific:2016aoc}, nearly a hundred years later after Albert Einstein's initial prediction. This date marked the beginning of a new type of astronomy -- \textit{GW astronomy}. To date there have been around a hundred confident observations of merging binaries \cite{Nitz:2021zwj,LIGOScientific:2021djp,Olsen:2022pin}: a large number of binary black holes (BBH)s, 2 binary neutron stars (BNS)s \cite{LIGOScientific:2017vwq, LIGOScientific:2020aai} and 2 neutron star-black hole (NSBH)s binaries \cite{LIGOScientific:2021qlt}. The first BNS event GW170817 was also identified with gamma-ray observations, providing the first evidence of a link between BNS mergers and short gamma-ray bursts \cite{LIGOScientific:2017vwq}. The current observations have provided insights into long standing questions in physics and astrophysics -- the behaviour of matter in the strong gravitational field regime \cite{LIGOScientific:2020tif,LIGOScientific:2018dkp,LIGOScientific:2016lio}, the formation channels of compact binaries \cite{KAGRA:2021duu,Mandel:2021smh} and the expansion of the Universe by constraining the Hubble constant \cite{Nissanke:2013fka, Palmese:2021mjm}. This thesis concerns with unresolved question of how compact binary systems were able to form and merge. 
+
+%Binary systems from a given formation channel will have a unique distribution for their intrinsic parameters such as component masses, spins or orbital eccentricity []. 
+It is generally predicted that compact binaries could be the result of the evolution of two stars in isolation \cite{Belczynski:2001uc,vandenHeuvel:2017pwp,Marchant:2016wow} or a dynamical assembly of two compact objects from independently evolved stars \cite{Rodriguez:2017pec,Sedda:2020wzl,  Wang:2020jsx, Santoliquido:2020bry}. The two broad channels have distinct predictions for the distribution of binary parameters that can be inferred from GW observations such as component spins or orbital eccentricity. Isolated binaries in the field, are expected to have component spins preferentially aligned with the orbital angular momentum (with some minor misalignment induced from the supernovae kick during the collapse of the core of either component) \cite{Kalogera:1999tq,Gerosa:2018wbw}. Isolated binaries tend to circularize by the time their dominant GW frequency reaches the sensitive band of the current detectors (i.e. 10 Hz) \cite{Peters:1964zz,Belczynski:2001uc}. Whereas in dense environments, such as globular star clusters, the random interaction of compact bodies leads to randomly oriented spins \cite{Rodriguez:2016vmx} -- causing precession of the binary plane \cite{Apostolatos:1994mx}. Dynamically assembled binaries can retain non-negligible eccentricities when they enter the frequency band of the current observatories \cite{Rodriguez:2016vmx,Trani:2021tan,Fragione:2018yrb}. Measurement of non-negligible eccentricity or precession in GW observations can help determine the formation histories of compact binaries \cite{Gompertz:2021xub,Stevenson:2017dlk, Zevin:2021rtf}. Distinguishing the various pathways have also wide range of astrophysical implications, constraining physics of stellar evolution \cite{Belczynski:2001uc,Santoliquido:2020bry,Silsbee:2016djf, Richards:2022fnq, Baibhav:2019gxm} to dynamics in dense environments \cite{Fragione:2018yrb,Ford:2021kcw,Petrovich:2017otm}.
+
+%Dense environments predict a rate of X eccentric systems [] or a rate of Y precessing systems []. 
+ %Future observatories ??
+
+Majority of the current observations are consistent with binaries with circular orbits and aligned spins \cite{KAGRA:2021duu}. Strong evidence has been found for orbital precession in the event GW200129 \cite{Hannam:2021pit} and tentative evidence for non-zero orbital eccentricity in GW190521 \cite{Gayathri:2020coq}. The predicted rate of precessing or eccentric binaries is largely consistent with the current null observations \cite{KAGRA:2021duu}. The observed population of binary events could be biased due to our current search methods. 
+
+%With the advancements in the current observatories or with the upcoming next-generation observatories, the rate of observations is expected to be $\mathcal{O}(10^5)$ more than today []. %This necessitates, the   Eccentric or precessing binaries can be serendipitously discovered today or discovered for sure in the future, 
+
+Modeled searches of GW signals rely on matched filtering to find signals in the interferometeric data. To search for the whole set of potential signals, a bank of filters known as the template bank is used, which discretizes the continuous parameter space of possible sources. The computational costs of matched filtering increases linearly with the size of the template bank, and also increases with the duration of the observable signal. Naively searching over the entire parameter space of compact binary mergers may not be computationally not feasible, a simplified approach makes the search feasible which assumes the sources have negligible eccentricities (quasi-circular), component spins aligned to the orbital angular momentum and GW emission only the via the dominant (2,2) mode. Such a non-eccentric, non-precessing search recovers the majority of merging binaries, but may lose precessing systems or systems with non-negligible eccentricities.   
+%Advancements in the current observatories and upcoming observatories is expected to have better sensitivity at lower frequencies. 
+
+Extensions of quasi-circular, aligned spin searches have led to eccentric searches with additional parameters in the template bank \cite{Nitz:2021vqh,Wang:2021qsu}, and to a precessing search using a more involved approach \cite{McIsaac:2023ijd}. Implementation of a fully precessing or eccentric searches is limited by the large computational costs (up to an order of magnitude more) of matched filtering, and the current waveform models. Waveform models and search methods have been actively being developed to tackle these challenges \cite{McIsaac:2023ijd, Klein:2021jtd, Joshi:2022ocr}. 
+
+In this thesis, we explore the challenges of extending current search methods to detect eccentric or precessing binaries in the context of current or future observatories. We focus on neutron star binaries (BNS + NSBH) due to the strong effects of precession, eccentricity or higher-order modes on such systems.  We explore three different avenues:
+\begin{itemize}
+    \item \textit{Performing the first eccentric search for spinning neutron star binaries} --  We perform a search for eccentric aligned spin BNS and NSBH binaries and use our results to make predictions for eccentric observations in the future.
+    \item \textit{Are the current searches losing signals from precessing NSBH binaries ?} -- We assess the loss in sensitivity of NSBH systems due to search assumptions mentioned above, and identify which type of binaries should be targeted for a fully precessing search in the future.
+    \item \textit{Designing a novel hierarchical search technique to reduce matched filtering costs} --  Reducing the dominant matched-filtering costs weill make searches for new sources feasible and searches of future detector’s data more tractable. We demonstrate a new hierarchical filtering scheme based on reduced basis which may save up computational costs up to $\sim 10\times$ without the loss in sensitivity.
+\end{itemize}
+
+%Extended searches have been performed for sources with eccentric orbits -- binary neutron stars or eccentric binary black holes in the data from Advanced LIGO or Virgo \cite{LIGOScientific:2019dag, LIGOScientific:2023lpe, Nitz:2021vqh,Wang:2021qsu}, and for precessing binaries in the data from the initial LIGO \cite{}. 
+
+
+
+%Precession, eccentricity or higher-modes, these effects cause amplitude and phase modulations to the observed signal which accrue over time (signal cycles). These effects are important for searches for signals involving 
+
+
+%such as neutron star binaries (BNS + NSBH) or with future observatories with improved sensitivies at lower frequencies  
+
+%neutron star binaries (BNS + NSBH)    
+
+
+
+
+%These effects cause phase and amplitude modulations to the observed signal that accrue over time, and thus, are stronger for signals from neutron star binaries (BNS + NSBH) or signals detected with future observatories.  
+
+%since they are strongly affected by current search methods due to strong eccentric, or precession or sub-dominant modes effects \cite{}.
+
+
+%We focus on sensitivity of neutron star binaries (BNS + NSBH), as they have strong eccentric, or precession or sub-dominant modes effects \cite{}. Since these effects cause phase and amplitude modulations to the observed signal that accrue over time, if the signals are long (as expected from improved or future observatories) become important. 
+
+ 
+
+%future observatories pose challenges due to large computational costs of matched filtering. 
+
+
+\subsubsection{Chapter descriptions and authorship clarification}
+
+Chapters 2 and 3 serve as foundational introductions. Chapter 2 establishes the theoretical groundwork, discussing gravitational-wave theory and GW waveform modeling for compact binary mergers, alongside an overview of compact binary formation and evolution mechanisms, including distinctions in astrophysical model predictions. Chapter 3 introduces GW observatories and data analysis for modeled GW searches from compact binary mergers, detailing the functioning of ground-based observatories, noise sources, and signal detection in Gaussian and non-Gaussian noise.
+
+Chapter 4 delves into technical specifics essential for understanding this thesis, including a detailed overview of the PyCBC search pipeline, observations from the 3-OGC and 4-OGC catalogs, and their astrophysical significance.
+
+In Chapter 5, we report our findings from the first eccentric search for spinning neutron star binaries in Advanced LIGO and Virgo's third observing run, offering observational constraints and predictions for future eccentric observations based on four astrophysical models.
+
+Chapter 6 explores precessing binaries, evaluating the sensitivity of existing search methods for NSBH systems and the potential loss of precessing binaries emitting higher-order GW modes. It identifies the range of binaries most impacted by current search assumptions, suggesting areas for future fully precessing searches.
+
+Chapter 7 presents a novel hierarchical approach to matched filtering using a reduced basis, including its implementation on GPUs and a comparison of cost and energy efficiency with current methodologies.
+
+The thesis concludes in Chapter 8, where we discuss future research prospects. 
+
+Below is the authorship clarification of the works that are used in this thesis:
+
+\begin{itemize}
+    \item \cite{Nitz:2021uxj} and \cite{Nitz:2021zwj} -- These catalogs represent an independent analysis of the public LIGO/VIRGO data done by the CBC group at the MPI Hannover. I contributed to ensuring data quality, assisted in validating the parameter estimation (PE) results against existing catalogs, and in preparing the research manuscript. Only the key results from these papers are used as a section of Chapter 4.  
+    \item \cite{Dhurkunde:2023qoe} -- this paper is currently under peer review (submitted to Physical Review Letters). The paper draft was written by myself with close guidance from A. H. Nitz. Chapter 5 is a reprint of this work. 
+    \item \cite{Dhurkunde:2022aek} -- is published in Physical Review D. I authored the draft of the paper under the close supervision and guidance of A. H. Nitz. Chapter 6 is a reprint of this work.
+    \item \cite{Dhurkunde:2021csz} -- is published in Physical Review D. H. Fehrmann proposed the topic, and the code-base was collaboratively developed by H. Fehrmann and myself. I composed the initial draft of the paper, which was subsequently revised by H. Fehrmann, with A. H. Nitz providing minor corrections. Chapter 7 is a reprint of this work.   
+\end{itemize} 
+
+
+
